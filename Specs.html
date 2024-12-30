@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Hayabusa</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* header styling */
+        header {
+            background-color: #3895d3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+        }
+
+        /* nav bar styling */
+        nav {
+            background-color: black;
+            padding: 10px 0;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centers the navigation items */
+            gap: 20px; /* Adjusts the spacing between items */
+        }
+        .navigation li {
+            display: inline-block;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: white; /* Adjust text color */
+            padding: 10px 15px; /* Adjust padding for clickable area */
+            display: block;
+        }
+        .navigation a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* second navbar for engine, chassis, styling, and specs */
+        .second-navbar {
+            background-color: #bb3f3f;
+            padding: 10px 0;
+        }
+        .second-navbar .navigation {
+            justify-content: center;
+        }
+
+        /* fullscreen image styling for sections */
+        .full-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* main content styling */
+        #content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: black;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #bb3f3f;
+        }
+        .engine-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .engine-description {
+            flex: 1;
+            min-width: 300px;
+        }
+        .engine-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .engine-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .specs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .spec-box {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .spec-box h3 {
+            margin-top: 0;
+            color: red;
+        }
+        .spec-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .spec-box ul li {
+            margin-bottom: 10px;
+        }
+
+        /* button container and button */
+        .book-now-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .book-now-button {
+            background-color: white;
+            color: black;
+            width: 90%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book-now-button:hover {
+            background-color: #333;
+        }
+
+        /* footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function showContent(section) {
+            const content = {
+                engine: `
+                    <h2>Engine</h2>
+                    <div class="engine-content">
+                        <div class="engine-description">
+                            <p><strong>Legendary power and reliability</strong></p>
+                            <p>Refinements implemented throughout the Hayabusa's legendary 1,340cm³ liquid-cooled inline-four engine achieve an even better balance of overall performance, yet greater efficiency and durability, while also satisfying BS6 emissions standards. Inheriting the proud legacy of the Ultimate Sport Bike that established the category in 1999, the Hayabusa continues to deliver more torque and power than any other sport bike at the engine speeds typically used in daily riding. A symbol of engineering pride and prowess, it is built to deliver the ultimate riding experience for the long run.</p>
+                        </div>
+                        <div class="engine-image">
+                            <img src="engine.png" alt="Suzuki Hayabusa Engine">
+                        </div>
+                    </div>
+                `,
+                chassis: `
+                    <div id="content">
+                        <img src='chassis.png' class="full-image">
+                        <div class="text-container">
+                            <h2>Superior Core Strength</h2>
+                            <p>The Hayabusa's chassis is designed to empower you with sure footing, nimble handling, and predictable control that combine to build confidence and enhance the riding experience. It delivers a smooth and comfortable ride that absorbs irregularities in the road surface and responds faithfully to your will. It effectively transfers the abundant power of its legendary powerplant to the pavement while fully leveraging its onboard intelligent control systems to run and brake effectively, whether barreling down a straight section of road or leaning through corners.</p>
+                            <p>At the core of this outstanding chassis is the Hayabusa’s tried-and-true twin-spar aluminum frame and swingarm. Though Suzuki built and track-tested a number of different prototype frames during the development phase, the proven combination of extruded aluminum sections and aluminum castings continues to lend the right amount of suppleness and strength to the overall rigid alloy frame structure. While more costly and demanding to fabricate, extruded aluminum sections pay off in achieving the overall balance required by a machine that delivers ultimate performance and reaches a nominal top speed of 299km/h. This is why extruded aluminum frame members can also be found on a number of supercars.</p>
+                            <p>Optimized Suspension: KYB inverted cartridge forks provide 120mm of front wheel travel and feature diamond-like carbon (DLC) coating on the 43mm outer diameter inner fork tubes to reduce friction and improve reaction to small irregularities in the road surface. Spring preload, compression damping, and rebound damping are all fully adjustable. The internal structure has been upgraded to better absorb the road surface and ensure an even smoother, more stable ride with optimum grip. The internal structure of the fully adjustable KYB link-type rear suspension was also revised to maximize comfort and straight-line stability. Additionally, settings for both the front and rear suspension are optimized to achieve a stable ride with neutral feel at all speeds.</p>
+                        </div>
+                    </div>
+                `,
+                styling: `
+                    <div id="content">
+                       <img src='styling.jpg' class="full-image">
+                        <div class="text-container">
+                            <h2>Poised and Ready to Fly</h2>
+                            <p>The sleek, aerodynamic silhouette is unmistakably that of the Hayabusa. But the modern look of its styling and luxurious attention to the finest details say it's a whole lot more. True to its design concept, "The Refined Beast", the new Hayabusa's long, low stance screams of the power, performance, poise and keen perceptive abilities possessed by a bird of prey. With an upswept tail and mufflers lending to the aggressive stance of its mass-forward image, this Hayabusa appears to be poised and ready to take flight on an exciting ride. The new mufflers take on coloring unique to your riding style over time, adding a personal touch to your Hayabusa. Splashes of color and chrome accents contrast blacked-out panel sections to create a visual impression of the incredible performance potential waiting to be tapped. Even the new English and Japanese logos speak of speed. The Hayabusa. It's a true tour de force.</p>
+                            <p>Aerodynamic performance is critically important on a motorcycle capable of reaching top speeds nearing 300km/h. Extensive wind tunnel testing, full use of the latest CAE tools and years of experience all contribute to achieving refined styling by which the rider and bike become one wind-cutting beast. The Hayabusa features one of the best drag coefficients found on any street-legal motorcycle, while also achieving excellent CdA and lift values to maximize top speed potential and stability at top speed.</p>
+                            <p>By any measure, ultimate performance is what the Hayabusa is all about.</p>
+                        </div>
+                    </div>
+                `,
+                specifications: `
+                    <h2>Specifications</h2>
+                    <div class="specs-container">
+                        <div class="spec-box">
+                            <h3>Engine Specifications</h3>
+                            <ul>
+                                <li><strong>Displacement:</strong> 1,340 cm³</li>
+                                <li><strong>Engine Type:</strong> 4-Stroke, Liquid-cooled, DOHC, in-line four</li>
+                                <li><strong>Bore x Stroke:</strong> 81.0 mm x 65.0 mm</li>
+                                <li><strong>Compression Ratio:</strong> 12.5:1</li>
+                                <li><strong>Ignition Type:</strong> Electronic Ignition (Transistorized)</li>
+                                <li><strong>Transmission Type:</strong> 6-Speed Constant Mesh</li>
+                            </ul>
+                        </div>
+                        <div class="spec-box">
+                            <h3>Chassis Specifications</h3>
+                            <ul>
+                                <li><strong>Frame Type:</strong> Twin-spar aluminum</li>
+                                <li><strong>Front Suspension:</strong> Inverted telescopic, coil spring, oil damped</li>
+                                <li><strong>Rear Suspension:</strong> Link type, coil spring, oil damped</li>
+                                <li><strong>Front Brakes:</strong> Dual disc</li>
+                                <li><strong>Rear Brake:</strong> Single disc</li>
+                                <li><strong>Front Tire Size:</strong> 120/70ZR17M/C (58W)</li>
+                                <li><strong>Rear Tire Size:</strong> 190/50ZR17M/C (73W)</li>
+                            </ul>
+                        </div>
+                        <div class="spec-box">
+                            <h3>Dimensions and Weight</h3>
+                            <ul>
+                                <li><strong>Overall Length:</strong> 2,180 mm</li>
+                                <li><strong>Overall Width:</strong> 735 mm</li>
+                                <li><strong>Overall Height:</strong> 1,165 mm</li>
+                                <li><strong>Wheelbase:</strong> 1,480 mm</li>
+                                <li><strong>Seat Height:</strong> 800 mm</li>
+                                <li><strong>Curb Mass:</strong> 264 kg</li>
+                                <li><strong>Fuel Tank Capacity:</strong> 20 liters</li>
+                            </ul>
+                        </div>
+                        <div class="spec-box">
+                            <h3>Performance</h3>
+                            <ul>
+                                <li><strong>Maximum Power:</strong> 190 PS @ 9,700 rpm</li>
+                                <li><strong>Maximum Torque:</strong> 150 Nm @ 7,000 rpm</li>
+                                <li><strong>Top Speed:</strong> Over 300 km/h</li>
+                                <li><strong>0-100 km/h:</strong> Approximately 3 seconds</li>
+                                <li><strong>Fuel Consumption:</strong> 15 km/l (combined cycle)</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            };
+            document.getElementById('content').innerHTML = content[section];
+        }
+    </script>
+</head>
+<body onload="showContent('engine')">
+    <header>
+        <h1>Suzuki Hayabusa</h1>
+        <p>Famed for its abundant power, agility, and majestic presence. Legendary for establishing new levels of ultimate sport performance.</p>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="Hayabusa.html">Hayabusa</a></li>
+            <li><a href="Specs.html">Specifications</a></li>
+            <li><a href="Accessories.html">Accessories</a></li>
+            <li><a href="Book.html">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <nav class="second-navbar">
+        <ul class="navigation">
+            <li><a href="javascript:void(0)" onclick="showContent('engine')">Engine</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('chassis')">Chassis</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('styling')">Styling</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('specifications')">Specifications</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+    </div>
+
+    <div class="book-now-container">
+        <button class="book-now-button" onclick="window.location.href='Book.html'"><b>BOOK NOW</b></button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Suzuki Motor Corporation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

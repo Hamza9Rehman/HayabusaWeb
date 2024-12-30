@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suzuki Hayabusa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* header styling */
+        header {
+            background-color: #3895d3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+        }
+
+        /* nav bar styling */
+        nav {
+            background-color: black;
+            padding: 10px 0;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centers the navigation items */
+            gap: 20px; /* Adjusts the spacing between items */
+        }
+        .navigation li {
+            display: inline-block;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: white; /* Adjust text color */
+            padding: 10px 15px; /* Adjust padding for clickable area */
+            display: block;
+        }
+        .navigation a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* for alignment of items under main pic*/
+        .colordisp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* to carry color change and info boxes */
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            align-items: start;
+        }
+
+        /* color change buttons */
+        .button-panel {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+        .button-panel button {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* color display image */
+        .image-display img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+        }
+
+        /* information boxes */
+        .text-panels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .text-panel {
+            margin-left: 30%;
+            padding: 10px;
+            width: 200px; /* Set a fixed width to control wrapping */
+            word-wrap: break-word; /* Allows long words to break and wrap onto the next line */
+             /* Ensures the same behavior in modern browsers */
+            white-space: normal; /* Ensures that text wraps normally */
+        }
+        .text-panel h2 {
+            margin-top: 0;
+        }
+
+        /* button container and button */
+        .book-now-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; /* Adjusts vertical spacing above and below the button */
+        }
+        .book-now-button {
+            background-color: black;
+            color: white;
+            width: 90%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book-now-button:hover {
+            background-color: #333;
+        }
+
+        /* footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+
+    <script>
+        function changeImage(imageName, Alternate) {
+            const imgElement = document.getElementById('displayed-image');            
+            imgElement.src = imageName;
+            imgElement.alt = Alternate;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Suzuki Hayabusa</h1>
+        <p>Famed for its abundant power, agility, and majestic presence. Legendary for establishing new levels of ultimate sport performance.</p>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="Hayabusa.html">Hayabusa</a></li>
+            <li><a href="Specs.html">Specifications</a></li>
+            <li><a href="Accessories.html">Accessories</a></li>
+            <li><a href="Book.html">Book Now</a></li>
+        </ul>
+    </nav>
+    <img src="1.jpg" alt="Image Description" style="width: 100%;">
+    <div class="colordisp">
+        <div class="container">
+            <div class="button-panel">
+                <button style="background-color: black;"  onclick="changeImage('blackbusa.png', 'Black GSX-1300R')"></button>
+                <button style="background-color: white;"onclick="changeImage('whitebusa.png', 'White GSX-1300R')"></button>
+                <button style="background-color: grey;" onclick="changeImage('greybusa.jpg', 'Grey GSX-1300R')"></button>
+            </div>
+            <div class="image-display">
+                <img id="displayed-image" src="blackbusa.png" alt="Black GSX-1300R">
+            </div>
+        </div>
+        <div class="text-panels">
+            <div class="text-panel">
+                <h2>4-STROKE, LIQUID-COOLED, DOHC,IN-LINE FOUR</h2>
+                <p style="color: #3895d3;"><b>ENGINE TYPE</b></p>
+            </div>
+            <div class="text-panel">
+                <h2>6-SPEED CONSTANT MESH</h2>
+                <p style="color: #3895d3;"><b>TRANSMISSION TYPE</b></p>
+            </div>
+            <div class="text-panel">
+                <h2>1,340 cm³</h2>
+                <p style="color: #3895d3;"><b>DISPLACEMENT</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="book-now-container">
+        <button class="book-now-button" onclick="window.location.href='Book.html'"><b>BOOK NOW</b></button>
+    </div>
+    <footer>
+        <p>&copy; 2024 Suzuki Motor Corporation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
